@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "netlify-cli": "^17.15.3"
+  }
+}
