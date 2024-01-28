@@ -20,7 +20,7 @@ app.use('/api/messages', messageRoute);
 //     console.error("Error connecting to MongoDB:", err.message);
 //     // Handle the error appropriately
 //   });
-mongoose.connect('mongodb+srv://thineshtthirumurugan:<ThineshChatApp@12345*>@chat-app.eedb26c.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://thineshtthirumurugan:ThineshChatApp@12345*@chat-app.eedb26c.mongodb.net/?retryWrites=true&w=majority');
   
 
 const server = app.listen(process.env.PORT,()=>{
