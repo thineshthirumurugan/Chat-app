@@ -14,17 +14,13 @@ app.use(express.json())  // This middleware parses incoming JSON requests
 app.use("/api/auth",userRoutes)
 app.use('/api/messages', messageRoute);
 
-// mongoose.connect(process.env.MONGO_URL).then(() => {
-//     console.log("DB Connection Successful...");
-//   }).catch((err) => {
-//     console.error("Error connecting to MongoDB:", err.message);
-//     // Handle the error appropriately
-//   });
-mongoose.connect('mongodb+srv://thineshtthirumurugan:ThineshChatApp@12345*@chat-app.eedb26c.mongodb.net/?retryWrites=true&w=majority');
-app.get("/", (req, res) => {
-    res.json("Hello");
-})
-  
+mongoose.connect(process.env.MONGO_URL).then(() => {
+    console.log("DB Connection Successful...");
+  }).catch((err) => {
+    console.error("Error connecting to MongoDB:", err.message);
+    // Handle the error appropriately
+  });
+
 
 const server = app.listen(process.env.PORT,()=>{
     console.log(`Server Started on Port: ${process.env.PORT}`)
