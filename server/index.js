@@ -21,6 +21,9 @@ app.use('/api/messages', messageRoute);
 //     // Handle the error appropriately
 //   });
 mongoose.connect('mongodb+srv://thineshtthirumurugan:ThineshChatApp@12345*@chat-app.eedb26c.mongodb.net/?retryWrites=true&w=majority');
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
   
 
 const server = app.listen(process.env.PORT,()=>{
